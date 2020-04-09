@@ -1,22 +1,30 @@
 'use strict';
 
-const keywordArray = [];
-const monstersArray = [];
+let keywordArray = [];
+let monstersArray = [];
 
-//Using AJAX to fetch the monsters
-$.ajax('data/page-1.json', {method: 'GET', dataType: 'JSON'})
-  .then ( (data) => {
-    data.forEach(value => {
-      new Monster(value).render();
+function queryPage() {
+  keywordArray = [];
+  monstersArray = [];
+  console.log(keywordArray, monstersArray);
+  $.ajax(`./data/${pageNumber}.json`, {method: 'GET', dataType: 'JSON'})
+    .then ( (data) => {
+      data.forEach(value => {
+        new Monster(value).render();
 
-      if (!keywordArray.includes(value.keyword) ){
-        keywordArray.push(value.keyword);
-      }
+        if (!keywordArray.includes(value.keyword) ){
+          keywordArray.push(value.keyword);
+        }
 
-      console.log('give keywords', keywordArray);
+        // console.log('end of log', pageNumber);
+        // console.log('give keywords', keywordArray);
+      });
+
+      populateDropDown();
+
     });
-    populateDropDown();
-  });
+}
+
 
 //constructor function for our monsters
 function Monster (data) {
@@ -32,7 +40,7 @@ function Monster (data) {
 Monster.prototype.render = function() {
   let template = $('#photo-template').html();
 
-  let $newSection = $('<section></section>');
+  let $newSection = $('<section></section>'); //target the section element
   $newSection.html(template);
   $newSection.find('img').attr('src', this.image_url);
   $newSection.find('h2').text(this.title);
@@ -68,4 +76,22 @@ function filterByKeyword (event) {
 }
 
 $('select').change(filterByKeyword);
+
+let pageNumber = 'page-1';
+
+function pageChanger(event){
+  event.preventDefault();
+  pageNumber = event.target.value;
+  console.log(pageNumber);
+  let oldMonster = $('section').not('#photo-template');
+  $(oldMonster).remove();
+  let oldKeyword = $('option');
+  $(oldKeyword).remove();
+  queryPage();
+}
+
+$('.next').on('click', pageChanger);
+queryPage();
+
+
 
