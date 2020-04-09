@@ -20,7 +20,6 @@ Start time: 10am
 Finish time: 11:05
 
 Actual time needed to complete: 1 hr and 5 min
-
 ---------------------------------------------------------
 
 Number and name of feature: Feature 2- Filter Images
@@ -32,7 +31,6 @@ Start time: 12pm
 Finish time: 1pm
 
 Actual time needed to complete: 1 hr
-
 ---------------------------------------------------------
 
 Number and name of feature: Feature 3 - Style the application
@@ -44,23 +42,21 @@ Start time: 115pm
 Finish time: 145
 
 Actual time needed to complete: 30min
-
 --------------------------------------------------------
 ***Lab-03***
 ---------------------------------------------------------
-Number and name of feature: ________________________________
+Number and name of feature: Feature 1: Pagination
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1.5 hours
 
-Start time: _____
+Start time: 10 am
 
-Finish time: _____
+Finish time: 1.5 hrs
 
-Actual time needed to complete: _____
-
+Actual time needed to complete: 3 hr
 -------------------------------------------------------------------
 
-Number and name of feature: ________________________________
+Number and name of feature: Feature 2: Templating
 
 Estimate of time needed to complete: _____
 
@@ -69,10 +65,10 @@ Start time: _____
 Finish time: _____
 
 Actual time needed to complete: _____
-
 ----------------------------------------------------------------------
 
-Number and name of feature: ________________________________
+Number and name of feature: Feature 3: Styling with Flexbox
+
 
 Estimate of time needed to complete: _____
 
