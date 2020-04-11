@@ -1,0 +1,41 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    background: grey;
+    padding: 7px;
+    margin: 7px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 4px 5px lightgrey;
+    
+}
+
+select {
+    width: 20%;
+    height: 20px;
+    margin: 15px;
+}
+
+#pageButtons {
+    display: flex;
+   
+}
+
+button {
+    width: 60px;
+    height: 35px;
+    margin: 10px;
+    background-color: lightseagreen;
+    border-radius: 8px;
+}
+
+#photo-template {
+    display: none;
+}
+
+span {
+    font-weight: 900px;
+}

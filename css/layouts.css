@@ -1,37 +1,19 @@
 
 header {
-    text-align: center;
-    margin: 45px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+    justify-content: center;
+    align-items: center;
 }
 
-
-img {
-    max-width: 250px;
-    max-height: 250px;
-}
-
-
-section {
-    width: 30%;
-    height: 350px;
-    float: left;
-    background: grey;
-    margin: 7px;
-    border: 1px solid #333;
-}
-
-#photo-template {
-    display: none;
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 footer {
     clear: both;
-    text-align: center;
-}
-h2 {
-    text-align: center;
 }
 
-main {
-    margin: auto;
-}
