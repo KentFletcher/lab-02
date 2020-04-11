@@ -10,7 +10,7 @@ function queryPage() {
   $.ajax(`./data/${pageNumber}.json`, {method: 'GET', dataType: 'JSON'})
     .then ( (data) => {
       data.forEach(value => {
-        new Monster(value).render();
+        new Monster(value).renderMonsters(value);
 
         if (!keywordArray.includes(value.keyword) ){
           keywordArray.push(value.keyword);
@@ -37,19 +37,27 @@ function Monster (data) {
 }
 
 //Render function for the monsters
-Monster.prototype.render = function() {
-  let template = $('#photo-template').html();
+// Monster.prototype.render = function() {
+//   let template = $('#photo-template').html();
 
-  let $newSection = $('<section></section>'); //target the section element
-  $newSection.html(template);
-  $newSection.find('img').attr('src', this.image_url);
-  $newSection.find('h2').text(this.title);
-  $newSection.find('p').text(this.description);
-  $newSection.attr('keyword', this.keyword);
-  $newSection.attr('horns', this.horns);
+//   let $newSection = $('<section></section>'); //target the section element
+//   $newSection.html(template);
+//   $newSection.find('img').attr('src', this.image_url);
+//   $newSection.find('h2').text(this.title);
+//   $newSection.find('p').text(this.description);
+//   $newSection.attr('keyword', this.keyword);
+//   $newSection.attr('horns', this.horns);
 
-  $('main').append($newSection);
+//   $('main').append($newSection);
 
+// };
+
+//Using Mustache to render our images
+Monster.prototype.renderMonsters = (data) => {
+  let $template = $('#photo-template').html();
+  let $target = $('main');
+  $target.append(Mustache.render($template, data));
+  console.log('rendered data', data);
 };
 
 //function to populate the dropdown menu
@@ -62,7 +70,7 @@ function populateDropDown() {
   });
 }
 
-//function to sort the keywords
+// function to sort the keywords
 function filterByKeyword (event) {
   const sections = $('section');
 

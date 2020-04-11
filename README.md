@@ -58,6 +58,18 @@ Actual time needed to complete: 3 hr
 
 Number and name of feature: Feature 2: Templating
 
+Estimate of time needed to complete: 1.5 hrs
+
+Start time: 1130
+
+Finish time: 145
+
+Actual time needed to complete: 2 hrs 15 min
+----------------------------------------------------------------------
+
+Number and name of feature: Feature 3: Styling with Flexbox
+
+
 Estimate of time needed to complete: _____
 
 Start time: _____
@@ -66,8 +78,7 @@ Finish time: _____
 
 Actual time needed to complete: _____
 ----------------------------------------------------------------------
-
-Number and name of feature: Feature 3: Styling with Flexbox
+Number and name of feature: Feature 4: Sort the images
 
 
 Estimate of time needed to complete: _____

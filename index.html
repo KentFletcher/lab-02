@@ -16,17 +16,25 @@
       <button value="page-1" class="next">Page 1</button>
       <button value="page-2" class="next">Page 2</button>
     </header>
+
     <main>
-      <section id="photo-template">
-        <h2></h2>
-        <img src="" alt="">
-        <p></p>
-      </section>
+      <script id="photo-template" type="x-tmpl-mustache">
+        <section class="photo-section" keyword="{{keyword}}">
+          <h2>{{title}}</h2>
+          <img src="{{image_url}}" alt="{{title}}">
+          <p>{{description}}</p>
+          <p>{{keyword}}</p>
+          <p>{{horns}}</p>
+        </section>
+      </script>
     </main>
+
     <footer>
       &copy; 2018 Code Fellows
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
