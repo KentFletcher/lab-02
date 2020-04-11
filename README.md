@@ -70,9 +70,9 @@ Actual time needed to complete: 2 hrs 15 min
 Number and name of feature: Feature 3: Styling with Flexbox
 
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hr
 
-Start time: _____
+Start time: 3
 
 Finish time: _____
 

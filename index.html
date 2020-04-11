@@ -13,8 +13,11 @@
       <select>
         <option value="default">Filter by Keyword</option>
       </select>
-      <button value="page-1" class="next">Page 1</button>
-      <button value="page-2" class="next">Page 2</button>
+      <div id="pageButtons">
+        <button value="page-1" class="next">Page-1</button>
+        <button value="page-2" class="next">Page-2</button>
+      </div>
+  
     </header>
 
     <main>
@@ -23,8 +26,8 @@
           <h2>{{title}}</h2>
           <img src="{{image_url}}" alt="{{title}}">
           <p>{{description}}</p>
-          <p>{{keyword}}</p>
-          <p>{{horns}}</p>
+          <p><span>Type:</span>{{keyword}}</p>
+          <p><span># of Horns:</span>{{horns}}</p>
         </section>
       </script>
     </main>
